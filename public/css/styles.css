@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+header, footer{
+    background: gray;
+    color: white;
+    text-align: center;
+}
+.container{
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.data-container{
+    /* background-color: red; */
+    border: 1px solid gray;
+    border-radius: .3em;
+    padding: 1em 3em;
+}
+.record{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: .2rem 0;
+}
+.buttons {
+    display: flex;
+    flex-direction: row;
+    gap: .4rem;
+}
+.buttons button, .buttons a{
+    cursor: pointer;
+    padding: .1rem .5rem;
+    background: #000;
+    color: #fff;
+    border-bottom: none;
+    text-decoration: none;
+    border-radius: .3rem;
+}
+
+.btn-ver{
+    width: 60px;
+    position: relative;
+    bottom: -20px;
+    right: -40px;
+    a{
+        cursor: pointer;
+        padding: .1rem .5rem;
+        background: #000;
+        color: #fff;
+        border-bottom: none;
+        text-decoration: none;
+        border-radius: .3rem;
+    }
+}
