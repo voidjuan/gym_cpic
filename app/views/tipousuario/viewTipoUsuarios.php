@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Centros Formacion</title>
+    <title>Tipos de usuario</title>
     <link rel="stylesheet" href="/css/styles.css">
     <style>
         .btn-crear{
@@ -28,21 +28,21 @@
         <h1>CPICGym - software gestion gimnasio CPIC</h1>
     </header>
     <div class="btn-crear">
-        <a href="/centroFormacion/new">Crear</a>
+        <a href="/tipoUsuario/new">Crear</a>
     </div>
     <div class="container">
         <div class="data-container">
             <?php
-                if (empty($centros)) {
-                    echo "<br>No se encuentran Centros de Formación en la base de datos";
+                if (empty($tipoUsuarios)) {
+                    echo "<br>No se encuentran Tipos de Usuarios en la base de datos";
                 } else {
-                    foreach ($centros as $key => $value) {
+                    foreach ($tipoUsuarios as $key => $value) {
                         echo "<div class='record'>
                             <span>ID: $value->id - $value->nombre</span>
                             <div class='buttons'>
-                                <a href='/centroFormacion/view/$value->id>Consultar</a>
-                                <a href='/centroFormacion/edit/$value->id'>Editar</a>
-                                <a href='/centroFormacion/delete/$value->id'>Eliminar</a>
+                                <a href='/tipoUsuario/view/$value->id'>Consultar</a>
+                                <a href='/tipoUsuario/edit/$value->id'>Editar</a>
+                                <a href='/tipoUsuario/delete/$value->id'>Eliminar</a>
                             </div>
                         </div>";
                     }

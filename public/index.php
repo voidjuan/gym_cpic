@@ -6,6 +6,9 @@ require_once '../app/controllers/rolController.php';
 require_once '../app/controllers/centroController.php';
 require_once '../app/controllers/actividadController.php';
 require_once '../app/controllers/programaController.php';
+require_once '../app/controllers/tipoUsuarioController.php';
+require_once '../app/controllers/grupoController.php';
+require_once '../app/controllers/loginController.php';
 
 
 $url = $_SERVER['REQUEST_URI']; // Lo que se ingresa en la url

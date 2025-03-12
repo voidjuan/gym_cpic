@@ -67,8 +67,8 @@ class CentroController extends BaseController {
     }
 
     public function deleteCentro($id) {
-        $rolObj = new CentroModel();
-        $rolObj->deleteCentro($id);
+        $centroObj = new CentroModel();
+        $centroObj->deleteCentro($id);
         $this->redirecTo("centroFormacion/view");
     }
 }

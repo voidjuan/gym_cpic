@@ -7,18 +7,27 @@ require_once MAIN_APP_ROUTE."../models/ProgramaModel.php";
 require_once MAIN_APP_ROUTE."../models/CentroModel.php";
 
 class ProgramaController extends BaseController {
+
+    public function __construct() {
+        # Se define la plantilla para este conttrolador
+        $this->layout = "admin_layout";
+        // Llamamos al padre del constructor
+        parent::__construct();
+    }
     public function index(){
         echo "<br>CONTROLLER> ProgramaController";
         echo "<br>ACTION> index";
     }
 
     public function view(){
-        // echo "<br>CONTROLLER> ActividadController";
-        // echo "<br>ACTION> view";
         // Llamamos al modelo de Rol
+        $titulo = "Programas Formación";
         $programaObj = new ProgramaModel();
         $programas = $programaObj->getAll();
-        $data = ["programas"=>$programas];
+        $data = [
+            "programas"=>$programas,
+            "title"=>$titulo
+        ];
         // Llamamos a la vista
         $this->render('programas/viewProgramas.php',$data);
     }
@@ -88,8 +97,8 @@ class ProgramaController extends BaseController {
     }
 
     public function deletePrograma($id) {
-        $rolObj = new ProgramaModel();
-        $rolObj->deletePrograma($id);
+        $programaObj = new ProgramaModel();
+        $programaObj->deletePrograma($id);
         $this->redirecTo("programaFormacion/view");
     }
 }

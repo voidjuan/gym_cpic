@@ -3,27 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Programas</title>
+    <title>Tipo de Usuario</title>
     <link rel="stylesheet" href="/css/styles.css">
 <body>
     <header>
         <h1>CPICGym - software gestion gimnasio CPIC</h1>
     </header>
     <div class="btn-ver">
-        <a href="/programaFormacion/view">Atras</a>
+        <a href="/tipoUsuario/view">Atras</a>
     </div>
     <div class="container">
         <div class="data-container">
             <?php
-                if($programa && is_object($programa)) {
+                if($tipoUsuario && is_object($tipoUsuario)) {
                     // echo "<pre>";
-                    // print_r($actividad);
+                    // print_r($rol);
                     // echo "</pre>";
                     echo "<div class='record'>
-                            <span>ID: $programa->id </span>
-                            <span>Codigo: $programa->codigo </span>
-                            <span>Nombre: $programa->nombre</span>
-                            <span>ID del centro: $programa->nombreCentro</span>
+                            <span>ID: $tipoUsuario->id -</span>
+                            <span>Nombre: $tipoUsuario->nombre</span>
                         </div>";
                 }
             ?>
